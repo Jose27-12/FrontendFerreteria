@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Degradado negro semitransparente */
+    url('../assets/FondoLogin.jpg')no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+}
+
+  
+  .register-box {
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 350px;
+    color: #000;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .register-box h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #004d3d;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #004d3d;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+  
+  .input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    color: #000;
+  }
+
+  .input-group input[type="password"] {
+    border: none;
+ 
+  }
+  
+  .input-group i {
+    margin-left: 10px;
+    color: #004d3d;
+    font-size: 18px;
+  }
+  
+  .register-button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #004d3d;
+  }
+  
+  .register-footer {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .register-footer a {
+    color: #004d40;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  .register-footer a:hover {
+    text-decoration: underline;
+}
+  
+
+.input-group select {
+  width: 100%;
+  
+  padding-left: 5px;
+  font-size: 16px;
+  border: none;
+
+  background-color: transparent;
+  color: #004d40;
+  outline: none;
+  appearance: none; /* quita estilo por defecto del navegador */
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+
+
+.input-group select option {
+  background-color: #f1f1f1;
+  color: #004d40;
+}

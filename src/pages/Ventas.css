@@ -1,0 +1,26 @@
+.ventas-container {
+    padding: 2rem;
+    transition: margin-left 0.3s;
+  }
+  
+  .ventas-container.shifted {
+    margin-left: 250px;
+  }
+  
+  .ventas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .ventas-table th,
+  .ventas-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .ventas-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,76 @@
+.dashboard-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc;
+    display: flex;
+  }
+  
+  /* Contenedor principal del contenido */
+  .dashboard-contenido {
+    
+    flex-grow: 1;
+    transition: margin-left 0.3s ease-in-out;
+    padding: 40px;
+    margin-left: 230px; /* Cuando el sidebar está abierto */
+  }
+  
+  .dashboard-contenido.shifted {
+    margin-left: 0; /* Cuando el sidebar está cerrado */
+  }
+  
+  /* Dashboard compacto y centrado */
+  .dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: auto;
+    max-width: 90%; /* Para que no se desborde en pantallas pequeñas */
+    min-width: 600px; /* Puedes ajustar esto según lo mínimo que quieras */
+    min-height: 300px;
+    min-height: 300px;
+  }
+  
+  
+  /* Asegura que el dashboard no se mueva más de lo necesario */
+  .dashboard.shifted {
+    transform: translateX(0);
+  }
+  
+  .dashboard h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  select {
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+    padding: 17px;
+    text-align: left;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {
+    background-color: #f0f8ff;
+  }
+  

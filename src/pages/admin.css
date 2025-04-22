@@ -1,0 +1,419 @@
+.almacen-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Sidebar oculto por defecto */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  transform: translateX(0);
+
+  background-color: #1e293b;
+  color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Sidebar visible cuando se abre */
+.sidebar.open {
+  transform: translateX(-100%);
+
+}
+
+.sidebar h2 {
+  margin: 20px 0;
+  font-size: 22px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin: 15px 0;
+  font-size: 17px;
+}
+.sidebar ul li:hover {
+  padding: 5px 7px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.sidebar ul li a:hover {
+  color: #38bdf8;
+}
+
+.badge {
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  margin-left: 8px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+
+/* Botón hamburguesa visible siempre */
+.hamburger {
+  font-size: 17px;
+  border: none;
+  margin-left: 5px;
+  padding: 5px;
+  cursor: pointer;
+  position: fixed;
+  top: 7px;
+  left: 10px;
+  z-index: 1100;
+  color: #fff;
+  background-color: #1e293b;
+}
+
+/* Contenido principal */
+.main-content {
+  flex-grow: 1;
+  margin-left: 260px;
+  padding: 40px;
+  background-color: #f8fafc;
+  transition: margin-left 0.2s ease;
+}
+
+/* Cuando el sidebar está abierto */
+.main-content.shifted {
+  margin-left: 0;
+
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #0f172a;
+}
+
+.main-content input[type="text"] {
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+
+/* Carrito de compras */
+
+.header-productos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrito-icono {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Tabla de productos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f9fafb;
+}
+.product-table td, .product-table th {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .product-table td:last-child {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    text-align: center;
+    border: none;
+    margin: 0 5px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+
+.sell-btn{
+    background-color: #49e729;
+}
+.sell-btn:hover{
+    background-color: #16ac39;
+}
+
+  
+  .edit-btn:hover {
+    background-color: #0069d9;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+
+/* Botón de agregar producto*/ 
+
+.add-product-btn{
+    margin: 0 10px;
+    background-color: #33e211;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.add-product-btn:hover{
+    background-color: #28a745;
+}
+.add-product-btn:focus{
+    outline: none;
+}
+
+/* Estilo para eliminar producto */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .mensaje-exito {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+
+/* Estilo para la confirmación de eliminación */
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .mensaje-exito {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .botones-confirmacion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .botones-confirmacion button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .botones-confirmacion button:first-child {
+    background-color: #4caf50;
+    color: white;
+  }
+  .botones-confirmacion button:first-child:hover {
+    background-color: #45a049;
+  }
+  
+  .botones-confirmacion button:last-child {
+    background-color: #770d05;
+    color: white;
+  }
+  
+    .botones-confirmacion button:last-child:hover {
+      background-color: #9b1c1c;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    .modal-edicion {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 350px;
+      max-width: 90%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    
+    /* Estilo para actualizar producto */
+   
+    
+    .modal-edicion label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    
+    
+    .modal-edicion input {
+      width: 100%;
+      max-width: 310px;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .modal-edicion button {
+      margin:5px 10px;
+      padding: 10px 15px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-cerrar {
+      background-color: #770d05;
+      color: white;
+    }
+
+    .btn-cerrar:hover {
+      background-color: #9b1c1c;
+    }
+    .btn-vaciar{
+      background-color: #757272;
+      color: white;
+    }
+    .btn-finalizar {
+      background-color: #339e37;
+      color: white;
+    }
+    .btn-finalizar:hover {
+      background-color: #2a7b2a;
+    }
+    
+    
+    .botones-modal {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .botones-modal button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .botones-modal button:first-child {
+      background-color: #4caf50;
+      color: white;
+    }
+    
+    .botones-modal button:last-child {
+      background-color: #770d05;
+      color: white;
+    }
+    
+  
+
+
+
+    /*Dashboard*/
+    /* src/index.css */
